@@ -10,10 +10,20 @@ body{
 }
 /**** Header ****/
 header{
-    background-color: #396172;
     width: 100%;
     color: #d6d7ff;
     position: relative;
+    /*I got this code online*/
+    background:
+        radial-gradient(rgba(100, 100, 100, 0.1) 3px, transparent 4px),
+        radial-gradient(rgba(100, 100, 100, 0.1) 3px, transparent 4px),
+        linear-gradient(#396172 4px, transparent 0),
+        linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a44a 75px, #a4a4a44a 76px, transparent 77px, transparent 109px),
+        linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a44a 76px, #a4a4a44a 77px, transparent 78px, transparent 109px),
+        #396172;
+    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    /**/
 }
 nav{
     position: absolute;
@@ -35,6 +45,7 @@ nav{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    gap: 1em;
 }
 .nav_button{
     text-decoration: none;
@@ -64,7 +75,7 @@ nav{
 
 /**** Main ****/
 main{
-    margin-top: 12vh;
+    margin-top: 10vh;
     margin-left: 0;
     margin-right: 0;
     display: flex;
@@ -90,11 +101,19 @@ main{
 
 /****Footer****/
 footer{    
-    background-color: #396172;
     width: 100%;
     height: 100px;
     color: #d6d7ff;
     margin-top: 3em;
+    background:
+        radial-gradient(rgba(100, 100, 100, 0.1) 3px, transparent 4px),
+        radial-gradient(rgba(100, 100, 100, 0.1) 3px, transparent 4px),
+        linear-gradient(#396172 4px, transparent 0),
+        linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a44a 75px, #a4a4a44a 76px, transparent 77px, transparent 109px),
+        linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a44a 76px, #a4a4a44a 77px, transparent 78px, transparent 109px),
+        #396172;
+    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
 
     display: flex;
     flex-direction: row;
@@ -104,17 +123,58 @@ footer{
 footer a{
     text-decoration: none;
     color: inherit;
+    font-size: 16px;
+    transition-duration: 0.2s;
 }
 footer div{
-    margin: 1em;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+.social_link{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+.personal_link a{
+    text-align: left;
+    font-size: 20px;
+}
+footer img{
+    height: 60px;
+    width: auto;
+}
+footer a:hover{
+    transition-duration: 0.2s;
+    transform: scale(1.05);
 }
 
 /****For Mobile Size****/
-@media(max-width: 480px){
+@media(max-width: 550px){
     nav{
         justify-content: space-around;
     }
     .nav_buttons{
         flex-direction: column;
+        gap: 1em;
+    }
+    .nav_button{
+        font-size: 32px;
+        background-color: #a4c0cc;
+        color:#1C0740;
+        box-shadow: 0 0 3px 3px #30515f;
+    }
+    .nav_button:hover{
+        font-size: 34px;
+    }
+    .personal_link{
+        margin: 0;
+    }
+    footer{
+        flex-direction: column;
+        justify-content: center;
+    }
+    footer img{
+        height: 40px;
     }
 }
