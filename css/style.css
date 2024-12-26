@@ -75,13 +75,15 @@ nav{
 
 /**** Main ****/
 main{
-    margin-top: 10vh;
-    margin-left: 0;
-    margin-right: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 3em;
+    margin-top: 2em;
 }
+#top_main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+}
+
 .top_header{
     text-align: center;
     font-size: 4em;
@@ -97,6 +99,37 @@ main{
     border-radius: 15px;
     padding-left: 1em;
     padding-right: 1em;
+}
+.text_section{
+    margin-top: 2em;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    width: 100%;
+}
+.quote{
+    font-style: italic;
+}
+.quote span{
+    font-size: .75em;
+    font-style: none;
+}
+
+.media_section{
+    width: 70%;
+}
+#portrait img{
+    width: 100%;
+    height: auto;
+}
+#portrait{
+    float: left;
+    margin: 1em;
+    padding: 0;
+    width: 100%;
+    box-shadow: 0 0 4px 8px #39617288;
 }
 
 /****Footer****/
@@ -149,8 +182,21 @@ footer a:hover{
     transform: scale(1.05);
 }
 
+/****For smaller desktop viewing****/
+@media(max-width: 800px){
+    .media_section{
+        width: 80%;
+    }
+    #portrait{
+        margin: 0;
+    }
+}
+
 /****For Mobile Size****/
 @media(max-width: 550px){
+    #top_main{
+        flex-direction: column;
+    }
     nav{
         justify-content: space-around;
     }
