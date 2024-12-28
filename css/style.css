@@ -54,6 +54,8 @@ nav{
     padding: 1em;
     transition-duration: 0.3s;
     font-size: 22px;
+    text-align: center;
+    width: 60%;
 
     display: flex;
     flex-direction: row;
@@ -88,6 +90,9 @@ main{
     text-align: center;
     font-size: 4em;
 }
+section{
+    margin-bottom: 4em;
+}
 
 /**** Main Content ****/
 .text_box{
@@ -95,7 +100,8 @@ main{
     margin: auto;
     font-size: 24px;
     background-color: #39617223;
-    box-shadow: 0 0 5px 10px #39617223;
+    /*box-shadow: 0 0 5px 10px #39617223;*/
+    padding: .5em;
     border-radius: 15px;
     padding-left: 1em;
     padding-right: 1em;
@@ -106,6 +112,7 @@ main{
     margin-right: 0;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     gap: 3em;
     width: 100%;
 }
@@ -118,20 +125,50 @@ main{
 }
 
 .media_section{
-    width: 70%;
+    width: 60%;
+    height: auto;
 }
 #portrait img{
     width: 100%;
     height: auto;
 }
 #portrait{
-    float: left;
-    margin: 1em;
+    display: block;
+    margin: 2em;
     padding: 0;
     width: 100%;
     box-shadow: 0 0 4px 8px #39617288;
 }
 
+/****Projects****/
+.display_box{
+    margin: auto;
+    width: 80%;
+    padding: 2em;
+    background-color: #39617223;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.display_box h2{
+    font-size: 3em;
+}
+.display_box_text{
+    font-size: 24px;
+}
+.project_details{
+    font-size: 16px;
+    font-weight: none;
+    font-style: italic;
+    margin-left: 1em;
+}
+.display_box_link img{
+    display: block;
+    width: 80%;
+    transition-duration: 0.2s;
+    margin: auto;
+}
 /****Footer****/
 footer{    
     width: 100%;
@@ -182,13 +219,45 @@ footer a:hover{
     transform: scale(1.05);
 }
 
+/****Larger Desktop****/
+@media(min-width: 550px){
+    .display_box_link img:hover{
+        width: 83%;
+        transition-duration: 0.2s;
+    }
+}
+@media(min-width: 1200px){
+    .text_box{
+        font-size: 30px;
+    }
+    .display_box_link img{
+        width: 60%;
+    }
+    .display_box_link img:hover{
+        width: 63%;
+    }
+    .display_box{
+        width: 70%;
+    }
+}
+
 /****For smaller desktop viewing****/
 @media(max-width: 800px){
     .media_section{
         width: 80%;
     }
     #portrait{
-        margin: 0;
+        margin-right: 0;
+        margin-left: 1em;
+    }
+    .text_box{
+        font-size: 20px;
+    }
+    .display_box h2{
+        font-size: 2em;
+    }
+    .display_box_text{
+        font-size: 20px;
     }
 }
 
@@ -223,4 +292,14 @@ footer a:hover{
     footer img{
         height: 40px;
     }
+    .text_box{
+        font-size: 24px;
+    }
+    #portrait{
+        margin: auto;
+    }
+    .display_box{
+        flex-direction: column;
+    }
+    
 }
