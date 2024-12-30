@@ -84,8 +84,13 @@ main{
     flex-direction: row;
     align-items: center;
     gap: 2em;
+    max-width: 1000px;
+    margin: auto;
+    height: 100vh;
 }
-
+#projects{
+    margin-top: 4em;
+}
 .top_header{
     text-align: center;
     font-size: 4em;
@@ -93,7 +98,6 @@ main{
 section{
     margin-bottom: 4em;
 }
-
 /**** Main Content ****/
 .text_box{
     width: 75%;
@@ -150,12 +154,19 @@ section{
     display: flex;
     flex-direction: row;
     align-items: center;
+    transition-duration: 0.2s;
+    margin-bottom: 2em;
+}
+.display_box:hover{
+    transform: scale(1.05);
+    transition-duration: 0.2s;
 }
 .display_box h2{
     font-size: 3em;
 }
 .display_box_text{
     font-size: 24px;
+    margin-right: 1em;
 }
 .project_details{
     font-size: 16px;
@@ -163,11 +174,19 @@ section{
     font-style: italic;
     margin-left: 1em;
 }
-.display_box_link img{
+.display_box img{
     display: block;
-    width: 80%;
-    transition-duration: 0.2s;
+    width: 25%;
     margin: auto;
+    border-radius: 5px;
+}
+.display_box canvas{
+    height: 100%;
+    border-radius: 5px;
+}
+.display_box_link{
+    text-decoration: none;
+    color:#17282f; 
 }
 /****Footer****/
 footer{    
@@ -220,21 +239,12 @@ footer a:hover{
 }
 
 /****Larger Desktop****/
-@media(min-width: 550px){
-    .display_box_link img:hover{
-        width: 83%;
-        transition-duration: 0.2s;
-    }
-}
 @media(min-width: 1200px){
     .text_box{
         font-size: 30px;
     }
-    .display_box_link img{
-        width: 60%;
-    }
-    .display_box_link img:hover{
-        width: 63%;
+    .display_box img{
+        width: 15%;
     }
     .display_box{
         width: 70%;
@@ -265,6 +275,7 @@ footer a:hover{
 @media(max-width: 550px){
     #top_main{
         flex-direction: column;
+        height: auto;
     }
     nav{
         justify-content: space-around;
@@ -300,6 +311,12 @@ footer a:hover{
     }
     .display_box{
         flex-direction: column;
+    }
+    .display_box img{
+        display: none;
+    }
+    .display_box canvas{
+        display: none;
     }
     
 }
