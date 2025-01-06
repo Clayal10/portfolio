@@ -99,6 +99,12 @@ section{
     margin-bottom: 4em;
 }
 /**** Main Content ****/
+.section_header{
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 1em;
+    color:#396172;
+}
 .text_box{
     width: 75%;
     margin: auto;
@@ -158,14 +164,14 @@ section{
     margin-bottom: 2em;
 }
 .display_box:hover{
-    transform: scale(1.05);
+    transform: scale(1.025);
     transition-duration: 0.2s;
 }
 .display_box h2{
-    font-size: 3em;
+    font-size: 2.5em;
 }
 .display_box_text{
-    font-size: 24px;
+    font-size: 20px;
     margin-right: 1em;
 }
 .project_details{
@@ -188,6 +194,69 @@ section{
     text-decoration: none;
     color:#17282f; 
 }
+
+/****Education and Skills****/
+#ed_skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#ed_skills p{
+    color:#396172;
+}
+#ed_skills > * {
+    flex: 1;
+}
+#ed_skills ul{
+    margin-left: 1em;
+    font-size: 20px;
+}
+#ed_skills h4{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 22px;
+}
+#education{
+    margin-left: 2em;
+}
+#education_list{
+    margin-top: 1em;
+}
+#coursework_list{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+#skills div{
+    text-align: center;
+}
+.skill_list{
+    list-style: none;
+    margin-left: 1em;
+}
+
+/****Experience****/
+#work_experience{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+#work_experience p{
+    color:#396172;
+
+}
+.work_experience_details{
+    list-style: none;
+    font-size: 20px;
+}
+.work_experience_details li{
+    margin-top: 1em;
+}
+
 /****Footer****/
 footer{    
     width: 100%;
@@ -249,6 +318,9 @@ footer a:hover{
     .display_box{
         width: 70%;
     }
+    #education{
+        margin-left: 4em;
+    }
 }
 
 /****For smaller desktop viewing****/
@@ -272,7 +344,7 @@ footer a:hover{
 }
 
 /****For Mobile Size****/
-@media(max-width: 550px){
+@media(max-width: 650px){
     #top_main{
         flex-direction: column;
         height: auto;
@@ -319,4 +391,7 @@ footer a:hover{
         display: none;
     }
     
+    #ed_skills{
+        flex-direction: column;
+    }
 }
